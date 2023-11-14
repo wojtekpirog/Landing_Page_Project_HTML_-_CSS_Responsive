@@ -2,6 +2,7 @@
   box-sizing: border-box;
   color: #FFF;
   scroll-behavior: smooth;
+  --white: #FFF;
 }
 
 * {
@@ -20,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #4E4E4E;
-  color: #FFF;
+  color: var(--white);
   height: 50px;
 }
 
@@ -38,7 +39,7 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: #FFF;
+  color: var(--white);
   padding: 10px;
   transition: all .25s;
 }
@@ -48,7 +49,7 @@
 }
 
 .navbar-links a:hover {
-  background-color: #FFF;
+  background-color: var(--white);
   color:#000;
   border-radius: 4px;
 }
@@ -68,7 +69,7 @@
   width: 100%;
   height: 7px;
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--white);
   margin: 6px 0;
 }
 
@@ -91,35 +92,30 @@
   padding-top: 170px;
 }
 
-h1.promo {
+.promo {
   width: 577px;
   font-size: 36px;
   font-weight: bold;
   margin: 30px 0;
 }
 
-h3.incentive {
-  width: 276px;
+.incentive {
+  width: 100%;
   height: 23.13px;
   font-size: 18px;
   margin-bottom: 30px;
 }
 
-.inner-background .button {
+.inner-background a {
   display: inline-block;
   width: 160px;
   height: 40px;
   text-align: center;
   padding-top: 8px;
   text-decoration: none;
-  color: #fff;
-  border: 3px solid #fff;
-  transition: all 1s linear;
-}
-
-.inner-background .button:hover {
-  background-color: #fff;
-  color:#000; 
+  color: var(--white);
+  border: 3px solid var(--white);
+  transition: all .3s linear;
 }
 
 .company-staff_intro {
@@ -187,7 +183,7 @@ h3.incentive {
   font-size: 36px;
   line-height: 42px;
   font-weight: bold;
-  color: #FFF;
+  color: var(--white);
 }
 
 .services {
@@ -202,7 +198,7 @@ h3.incentive {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFF;
+  background-color: var(--white);
   color: #000;
   border-radius: 8px;
   width: 200px;
@@ -253,7 +249,7 @@ h3.incentive {
   flex-direction: column;
   align-items: center;
   background-color: #4E4E4E;
-  color: #FFF;
+  color: var(--white);
 }
 
 .copyright {
@@ -273,7 +269,7 @@ h3.incentive {
 .social-links li a {
   text-decoration: none;
   padding: 0 10px;
-  color: white;
+  color: var(--white);
   font-size: 1.8rem;
   transition: color .15s linear;
 }
@@ -315,11 +311,15 @@ h3.incentive {
   .navbar-links {
     display: flex;
   }
+  .inner-background a:hover {
+    background-color: var(--white);
+    color: #000;
+  }
   .staff-member--container:nth-of-type(odd) {
     flex-direction: row;
     align-items: center;
   }
-  .staff-member-container:nth-of-type(odd) h4, .staff-member-container:nth-of-type(odd) a {
+  .staff-member--container:nth-of-type(odd) h4, .staff-member--container:nth-of-type(odd) a {
     text-align: left;
   }
   .staff-member--container:nth-of-type(even) {
